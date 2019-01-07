@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>plug-in</key>
+	<dict>
+		<key>extensions</key>
+		<dict>
+			<key>Xcode.FileDataType.Stencil</key>
+			<dict>
+				<key>id</key>
+				<string>Xcode.FileDataType.Stencil</string>
+				<key>localizedDescription</key>
+				<string>Stencil Template</string>
+				<key>name</key>
+				<string>File type for Stencil</string>
+				<key>point</key>
+				<string>Xcode.FileDataType</string>
+				<key>typeConformedTo</key>
+				<array>
+					<dict>
+						<key>typeIdentifier</key>
+						<string>public.source-code</string>
+					</dict>
+				</array>
+				<key>typeIdentifier</key>
+				<string>public.stencil-template</string>
+				<key>version</key>
+				<string>1.0</string>
+			</dict>
+			<key>Xcode.FileDataTypeDetector.Stencil</key>
+			<dict>
+				<key>detectedTypeIdentifier</key>
+				<string>public.stencil-template</string>
+				<key>id</key>
+				<string>Xcode.FileDataTypeDetector.Stencil</string>
+				<key>matchesExtension</key>
+				<string>stencil</string>
+				<key>point</key>
+				<string>Xcode.FileDataTypeDetector</string>
+			</dict>
+			<key>Xcode.SourceCodeLanguage.Stencil</key>
+			<dict>
+				<key>commentSyntax</key>
+				<array>
+					<dict>
+						<key>prefix</key>
+						<string>{#</string>
+						<key>suffix</key>
+						<string>#}</string>
+					</dict>
+				</array>
+				<key>conformsTo</key>
+				<array>
+					<dict>
+						<key>identifier</key>
+						<string>Xcode.SourceCodeLanguage.Generic</string>
+					</dict>
+				</array>
+				<key>fileDataType</key>
+				<array>
+					<dict>
+						<key>identifier</key>
+						<string>public.stencil-template</string>
+					</dict>
+				</array>
+				<key>id</key>
+				<string>Xcode.SourceCodeLanguage.Stencil</string>
+				<key>languageName</key>
+				<string>Stencil</string>
+				<key>languageSpecification</key>
+				<string>xcode.lang.stencil</string>
+				<key>name</key>
+				<string>Stencil Language</string>
+				<key>point</key>
+				<string>Xcode.SourceCodeLanguage</string>
+				<key>version</key>
+				<string>1.0</string>
+			</dict>
+			<key>Xcode.IDEKit.Inspector.FileIdentityAndType.public.stencil-template</key>
+			<dict>
+				<key>fileDataType</key>
+				<string>public.stencil-template</string>
+				<key>group</key>
+				<string>Xcode.IDEKit.Inspector.FileInspectorTypeGroup.Sourcecode.Various</string>
+				<key>id</key>
+				<string>Xcode.IDEKit.Inspector.FileIdentityAndType.public.stencil-template</string>
+				<key>name</key>
+				<string>File Inspector Entry - Stencil Template</string>
+				<key>point</key>
+				<string>Xcode.IDEKit.FileInspectorTypeGroupEntry</string>
+				<key>version</key>
+				<string>0.1</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

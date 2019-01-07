@@ -1,0 +1,107 @@
+// Stencil
+(
+
+/****************************************************************************/
+// MARK: Stencil keywords
+/****************************************************************************/
+
+    {
+        Identifier = "xcode.lang.stencil.identifier";
+        Syntax = {
+            StartChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_";
+            Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
+            Words = (
+                "block",
+                "else",
+                "endblock",
+                "endfilter",
+                "endfor",
+                "endif",
+                "extends",
+                "false",
+                "for",
+                "if",
+                "ifnot",
+                "in",
+                "include",
+                "now",
+                "true",
+             );
+            Type = "xcode.syntax.keyword";
+            AltType = "xcode.syntax.identifier";    // non-keywords are identifiers
+        };
+    },
+
+    {
+        Identifier = "xcode.lang.stencil.comment";
+        Syntax = {
+            Start = "{#";
+            End = "#}";
+            Foldable = YES;
+            IncludeRules = ( "xcode.lang.url", "xcode.lang.url.mail" );
+            Type = "xcode.syntax.comment";
+        };
+    },
+
+
+/****************************************************************************/
+// MARK: Stencil Syntax Coloring
+/****************************************************************************/
+
+    {
+        Identifier = "xcode.lang.stencil";
+        Description = "Stencil Coloring";
+        BasedOn = "xcode.lang.simpleColoring";
+        IncludeInMenu = YES;
+        UsesCLikeIndentation = YES;
+        Name = "Stencil";
+        Syntax = {
+            Tokenizer = "xcode.lang.stencil.lexer";
+            IncludeRules = (
+                "xcode.lang.stencil.variable",
+                "xcode.lang.stencil.tag",
+            );
+            Type = "xcode.syntax.plain";
+        };
+    },
+    // The following rule returns tokens to the other rules
+    {
+        Identifier = "xcode.lang.stencil.lexer";
+        Syntax = {
+            IncludeRules = (
+                "xcode.lang.stencil.comment",
+                "xcode.lang.string",
+                "xcode.lang.character",
+                "xcode.lang.stencil.identifier",
+                "xcode.lang.number",
+            );
+        };
+    },
+    {
+        Identifier = "xcode.lang.stencil.variable";
+        Syntax = {
+            Tokenizer = "xcode.lang.stencil.lexer";
+            Start = "{{";
+            End = "}}";
+            Foldable = YES;
+            Recursive = NO;
+            IncludeRules = (
+            );
+            Type = "xcode.syntax.preprocessor";
+        };
+    },
+    {
+        Identifier = "xcode.lang.stencil.tag";
+        Syntax = {
+            Tokenizer = "xcode.lang.stencil.lexer";
+            Start = "{%";
+            End = "%}";
+            Recursive = NO;
+            IncludeRules = (
+                "xcode.lang.stencil.identifier"
+            );
+            Type = "xcode.syntax.preprocessor";
+        };
+    },
+)
+
